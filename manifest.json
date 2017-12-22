@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Coinranking-Plus",
+  "description": "Enhance your Coinranking viewing experience",
+  "version": "1.0",
+  "browser_action": {
+   "default_icon": "plus.png",
+   "default_popup": "popup.html"
+  },
+  "icons": {
+      "16":"plus.png",
+      "48":"plus.png",
+      "128":"plus.png"
+    },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [{
+     "matches": [
+       "https://coinranking.com/*",
+       "http://coinranking.com/*"
+     ],
+     "js": [
+       "jquery-3.0.0.min.js",
+       "init.js",
+       "content.js"
+     ]
+  }],
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "activeTab",
+    "cookies",
+    "storage"
+  ]
+}
