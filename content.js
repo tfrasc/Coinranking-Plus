@@ -16,10 +16,10 @@ chrome.storage.sync.get("coins", function (obj) {
       }
       if(found == true)
       {
-        var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorited'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/filled.png' /></span>";
+        var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorited'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/filled.png' /></span>";
       }
       else {
-        var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></span>";
+        var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></span>";
       }
       $(this).before(span);
       found = false;
@@ -30,7 +30,7 @@ chrome.storage.sync.get("coins", function (obj) {
       var name = $(this).find('.coin-name').first().text();
       var img = $(this).find('.coin-list__body__row__cryptocurrency__prepend__icon__img').attr('src');
       var url = $(this).parent().parent().attr('href');
-      var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></span>";
+      var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></span>";
       $(this).before(span);
     });
   }
@@ -62,7 +62,7 @@ $(document).on('click', '.favorite', function() {
       chrome.storage.sync.set({'coins': coins}, function() {
         $(_this).removeClass('favorite');
         $(_this).addClass('favorited');
-        $(_this).find('img').attr('src', 'http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/filled.png');
+        $(_this).find('img').attr('src', 'https://s3-us-west-1.amazonaws.com/memeo-development/public/filled.png');
       });
   });
 });
@@ -87,10 +87,10 @@ $(document).on('click', '.search__container-item', function() {
           }
           if(found == true)
           {
-            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorited'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/filled.png' /></span>";
+            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorited'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/filled.png' /></span>";
           }
           else {
-            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></span>";
+            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></span>";
           }
           $(this).before(span);
           found = false;
@@ -101,7 +101,7 @@ $(document).on('click', '.search__container-item', function() {
           var name = $(this).find('.coin-name').first().text();
           var img = $(this).find('.coin-list__body__row__cryptocurrency__prepend__icon__img').attr('src');
           var url = $(this).parent().parent().attr('href');
-          var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></span>";
+          var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></span>";
           $(this).before(span);
         });
       }
@@ -128,10 +128,10 @@ $(document).on('keyup', '#search', function() {
           }
           if(found == true)
           {
-            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorited'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/filled.png' /></span>";
+            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorited'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/filled.png' /></span>";
           }
           else {
-            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></span>";
+            var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></span>";
           }
           $(this).before(span);
           found = false;
@@ -142,7 +142,7 @@ $(document).on('keyup', '#search', function() {
           var name = $(this).find('.coin-name').first().text();
           var img = $(this).find('.coin-list__body__row__cryptocurrency__prepend__icon__img').attr('src');
           var url = $(this).parent().parent().attr('href');
-          var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></span>";
+          var span = "<span style='position: absolute; left: 15%; margin-top: 10px; color: #3cd483' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "' class='favorite'><img style='height: 20px; width: 20px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></span>";
           $(this).before(span);
         });
       }
@@ -179,7 +179,7 @@ $(document).on('click', '.favorited', function() {
       chrome.storage.sync.set({'coins': coin_str}, function() {
         $(_this).removeClass('favorited');
         $(_this).addClass('favorite');
-        $(_this).find('img').attr('src', 'http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png');
+        $(_this).find('img').attr('src', 'https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png');
       });
   });
 });
@@ -207,13 +207,13 @@ if($('.coin-page').length > 0)
       }
       if(found == true)
       {
-        var span = "<div class='coin-page__coin-info-item favorited' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "'><img style='height: 20px; width: 20px; margin-top: 4px; margin-left: 10px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/filled.png' /></div>";
+        var span = "<div class='coin-page__coin-info-item favorited' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "'><img style='height: 20px; width: 20px; margin-top: 4px; margin-left: 10px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/filled.png' /></div>";
       }
       else {
         name = $('.coin-page__icon-img').attr('alt').split(' (')[0];
         img = $('.coin-page__icon-img').attr('src');
         url = window.location.href;
-        var span = "<div class='coin-page__coin-info-item favorite' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "'><img style='height: 20px; width: 20px; margin-top: 4px; margin-left: 10px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></div>";
+        var span = "<div class='coin-page__coin-info-item favorite' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "'><img style='height: 20px; width: 20px; margin-top: 4px; margin-left: 10px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></div>";
       }
       $('.coin-page__coin-info').append(span);
     }
@@ -221,7 +221,7 @@ if($('.coin-page').length > 0)
       var name = $('.coin-page__icon-img').attr('alt').split(' (')[0];
       var img = $('.coin-page__icon-img').attr('src');
       var url = window.location.href;
-      var span = "<div class='coin-page__coin-info-item favorite' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "'><img style='height: 20px; width: 20px; margin-top: 4px; margin-left: 10px;' src='http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png' /></div>";
+      var span = "<div class='coin-page__coin-info-item favorite' data-url='" + url + "' data-img='" + img + "' data-name='" + name + "'><img style='height: 20px; width: 20px; margin-top: 4px; margin-left: 10px;' src='https://s3-us-west-1.amazonaws.com/memeo-development/public/empty.png' /></div>";
       $('.coin-page__coin-info').append(span);
     }
   });
