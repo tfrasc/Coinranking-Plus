@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Coinranking-Plus",
-  "description": "Enhance your Coinranking viewing experience",
+  "name": "Coinranking Plus",
+  "description": "Enhance your Coinranking viewing experience by adding favorites",
   "version": "1.0",
   "browser_action": {
    "default_icon": "plus.png",

@@ -1,4 +1,5 @@
-# Coinranking-Plus
+# Coinranking Plus
+*This extension is officially live on the Chrome Web Store! Add the [Coinranking Plus Chrome Extension here](https://chrome.google.com/webstore/detail/coinranking-plus/igebmifjpedhgcdpgikmccblmnnpkokk)!*
 
 *This extension is currently in active development*
 
@@ -12,6 +13,6 @@ After adding this extension, go to [Coinranking](https://coinranking.com/) and y
 Reporting issues, bugs, and improvements is always welcome and encouraged! Please submit a GitHub issue [here](https://github.com/tfrasc/Coinranking-Plus/issues) and your submission will be addressed as soon as possible. Remember, this extension is currently in active development and new implementations, fixes, and improvements will be added regularly.
 
 ## TODO
-- Submit to Chrome Web Store
+- ~~Submit to Chrome Web Store~~ This extension is officially live on the Chrome Web Store! Add the [Coinranking Plus Chrome Extension here](https://chrome.google.com/webstore/detail/coinranking-plus/igebmifjpedhgcdpgikmccblmnnpkokk)!
 - Integrate a search functionality leading to a search on the Coinranking site.
 - Allow removing and reorganizing favorites in popup.
