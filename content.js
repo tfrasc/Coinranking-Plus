@@ -1,3 +1,4 @@
+//handle home page
 chrome.storage.sync.get("coins", function (obj) {
   var found = false;
   if(obj.coins != null && obj.coins != '') {
@@ -35,20 +36,6 @@ chrome.storage.sync.get("coins", function (obj) {
   }
 })
 
-$(document).on('click', '.announcement-container', function() {
-  // chrome.storage.sync.set({'coins': 'x'}, function() {
-    // Notify that we saved.
-    // message('Settings saved');
-    chrome.storage.sync.get("coins", function (obj) {
-      // console.log(obj.coins);
-      chrome.storage.sync.set({'coins': ''}, function() {
-      //   // Notify that we saved.
-      //   // message('Settings saved');
-      });
-    })
-  // });
-});
-
 $(document).on('click', '.coin-list__body__row', function(e) {
   e.preventDefault();
 })
@@ -58,7 +45,6 @@ $(document).on('click', '.grid', function() {
 })
 
 $(document).on('click', '.favorite', function() {
-  // console.log($(this).data('coin'));
   var name = $(this).data('name');
   var img = $(this).data('img');
   var url = $(this).data('url');
@@ -67,17 +53,13 @@ $(document).on('click', '.favorite', function() {
   chrome.storage.sync.get("coins", function (obj) {
       var coins = obj.coins;
 
-      // var coins = chrome.storage.get('coins');
-      // console.log(coins);
-
       if(coins !== '')
       {
         coins += ',';
       }
       coins += name + '|' + img + '|' + url;
+
       chrome.storage.sync.set({'coins': coins}, function() {
-        // Notify that we saved.
-        // message('Settings saved');
         $(_this).removeClass('favorite');
         $(_this).addClass('favorited');
         $(_this).find('img').attr('src', 'http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/filled.png');
@@ -169,7 +151,6 @@ $(document).on('keyup', '#search', function() {
 });
 
 $(document).on('click', '.favorited', function() {
-  // console.log($(this).data('coin'));
   var name = $(this).data('name');
   var img = $(this).data('img');
   var url = $(this).data('url');
@@ -196,8 +177,6 @@ $(document).on('click', '.favorited', function() {
       }
 
       chrome.storage.sync.set({'coins': coin_str}, function() {
-        // Notify that we saved.
-        // message('Settings saved');
         $(_this).removeClass('favorited');
         $(_this).addClass('favorite');
         $(_this).find('img').attr('src', 'http://i1227.photobucket.com/albums/ee428/i8aBlueSkittle/empty.png');
@@ -205,7 +184,7 @@ $(document).on('click', '.favorited', function() {
   });
 });
 
-//handle show pages
+//handle specific pages
 if($('.coin-page').length > 0)
 {
   var page_coin = $('.coin-page__icon-img').attr('alt').split(' (')[0];

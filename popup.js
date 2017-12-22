@@ -1,25 +1,4 @@
-var background = chrome.extension.getBackgroundPage();
-
 $(document).ready(function() {
-
-  // $('#start-btn').click(function() {
-  //   if(first == false) {
-  //     background.togglePlay();
-  //   }
-  //   else {
-  //     background.load();
-  //     first = false;
-  //   }
-  // });
-  //
-  // $('#next-btn').click(function() {
-  //   background.next();
-  // });
-  //
-  // $('#back-btn').click(function() {
-  //   background.back();
-  // });
-
   chrome.storage.sync.get("coins", function (obj) {
     if(obj.coins == null || obj.coins == '') {
       $('#favorites').append('<div class="no-coins">Add your favorite coins on <span class="home-button">Coinranking</span>!</div>')
@@ -44,5 +23,4 @@ $(document).ready(function() {
   $(document).on('click', '.title-img', function() {
     chrome.tabs.update({url: 'https://coinranking.com/'});
   });
-
 });
